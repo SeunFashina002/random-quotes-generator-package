@@ -1,12 +1,10 @@
 import random
 
-file_path = "random_quotes_generator\quotes.txt"
+FILE_PATH = "random_quotes_generator\quotes.txt"
 
-def get_random_quote(file_path):
-    with open(file_path, 'r') as file:
+def get_random_quotes():
+    with open(FILE_PATH, 'r') as file:
         new_quotes = file.readlines()
         return random.choice(new_quotes)
 
-
-
-
+print(get_random_quotes())
